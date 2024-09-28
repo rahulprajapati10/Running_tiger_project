@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <center>
+      <!-- <marquee behavior="" direction="right"> -->
+        <img src="" id="running_tiger" alt="no-img" />
+      <!-- </marquee> -->
+    </center>
+  </body>
+
+  <script>
+    const running_tiger_pics = document.getElementById("running_tiger");
+    // console.log(running_tiger_pics);
+
+    var i = 1;
+
+    function run() {
+      var img = i + ".png";
+        // console.log(img);
+      running_tiger_pics.src = img;
+      i++;
+
+      if (i == 9) {
+        i = 1;
+      }
+    }
+
+    run();
+
+    // setInterval(run , 1000)
+    // setInterval(run , 500)
+    setInterval(run, 100);
+
+  </script>
+</html>
